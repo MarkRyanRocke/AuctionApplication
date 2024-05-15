@@ -19,6 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<AuctionSvcHttpClient>().AddPolicyHandler(GetPolicy());
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
@@ -33,6 +34,7 @@ builder.Services.AddMassTransit(x =>
 
             endpoint.ConfigureConsumer<AuctionCreatedConsumer>(context);
         });
+
         config.ConfigureEndpoints(context);
     });
 });
