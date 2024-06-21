@@ -17,7 +17,7 @@ export default function Logo() {
 
   return (
     <div onClick={doReset} className='cursor-pointer flex items-center gap-2 text-3xl font-semibold text-blue-500'>
-                <AiOutlineCar size={34} />
+                {/* <AiOutlineCar size={34} /> */}
                 <div>Auction Application</div>
     </div>
   )
