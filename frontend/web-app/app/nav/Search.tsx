@@ -28,13 +28,7 @@ export default function Search() {
           <input type="text" placeholder='Search by make, model or color'
               value={searchValue}
               className='
-                    flex-grow
-                    pl-5
-                    bg-transparent
-                    focus:outline-none
-                    border-transparent
-                    focus:border-transparent
-                    focus:ring-0
+                    input-custom
                     text-sm
                     text-gray-600
                 '
